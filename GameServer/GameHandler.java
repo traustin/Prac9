@@ -32,12 +32,13 @@ public class GameHandler extends Thread {
             for(int i = 0; i <  word.length(); i++){
                 shownWord += "_";
             }
-            out.println("WORD " + shownWord);
+            out.println(shownWord);
             boolean done = false;
             while(!done){
                 String s = in.readLine().trim();
                 System.out.println(s);
                 if(s.length()==3&&s.equals("BYE")){
+                    System.out.println("Client disconnected");
                     break;
                 }else if(s.length()==5&&s.equals("RESET")){
                     word = wordGenerator.getWord();
@@ -45,7 +46,7 @@ public class GameHandler extends Thread {
                     for(int i = 0; i <  word.length(); i++){
                         shownWord += "_";
                     }
-                    out.println("WORD " + shownWord);
+                    out.println(shownWord);
                 }else if(s.length()>4 && s.substring(0,4).equals("TRY ")){
                     char letter = s.charAt(4);
                     boolean changed = false;
@@ -55,8 +56,12 @@ public class GameHandler extends Thread {
                             changed = true;
                         }
                     }
-                    out.println("WORD " + shownWord);
-                    out.println("RESULT " + changed);
+                    out.println(letter + " : " + shownWord);
+                    if(word.equals(shownWord)){
+                        out.println("RESULT " + changed);
+                    }else if(changed == false){
+                        out.println("RESULT " + changed);
+                    }
                 }
             }
         } catch (IOException e) {
