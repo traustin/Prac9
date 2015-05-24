@@ -15,6 +15,7 @@ function handleLoadedTexture(texture) {
 }
 
 var skinTexture;
+var woodTexture;
 
 
 function initTexture() {
@@ -24,6 +25,14 @@ function initTexture() {
         handleLoadedTexture(skinTexture)
     };
 
-    skinTexture.image.src = "skin.jpg";
+    skinTexture.image.src = "./img/skin.jpg";
+
+    woodTexture = gl.createTexture();
+    woodTexture.image = new Image();
+    woodTexture.image.onload = function () {
+        handleLoadedTexture(woodTexture)
+    };
+
+    woodTexture.image.src = "./img/wood.jpg";
     
 }
