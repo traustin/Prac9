@@ -27,11 +27,12 @@ public class GameHandler extends Thread {
             email = email.substring(email.indexOf(" ") + 1);
             System.out.println("Email: " + email);
             String word = wordGenerator.getWord();
+            System.out.println(word);
             String shownWord = "";
             for(int i = 0; i <  word.length(); i++){
                 shownWord += "_";
             }
-            out.println("WORD" + shownWord);
+            out.println("WORD " + shownWord);
             boolean done = false;
             while(!done){
                 String s = in.readLine().trim();
@@ -44,13 +45,14 @@ public class GameHandler extends Thread {
                     for(int i = 0; i <  word.length(); i++){
                         shownWord += "_";
                     }
-                    out.println("WORD" + shownWord);
+                    out.println("WORD " + shownWord);
                 }else if(s.length()>4 && s.substring(0,4).equals("TRY ")){
                     char letter = s.charAt(4);
                     boolean changed = false;
                     for(int i = 0; i < word.length(); i++){
                         if(letter ==  word.charAt(i)){
                             shownWord = shownWord.substring(0,i) + letter + shownWord.substring(i+1);
+                            changed = true;
                         }
                     }
                     out.println("WORD " + shownWord);
