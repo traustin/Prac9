@@ -26,8 +26,6 @@ public class GameServer{
 
         public MailChecker(){
             try {
-                pop = new POP3Client(Main.pop3ServerName,Main.pop3Port);
-                pop.login(Main.pop3Username,Main.pop3Password);
                 clients = new ArrayList<GameHandler>();
                 shownMessages = new ArrayList<String>();
             }
@@ -39,23 +37,29 @@ public class GameServer{
         public void run(){
             while(true) {
                 try {
+                    pop = new POP3Client(Main.pop3ServerName,Main.pop3Port);
+                    pop.login(Main.pop3Username,Main.pop3Password);
                     pop.populateMailHeaders();
                     headers = pop.getMailList();
+                    shownMessages = new ArrayList<String>();
+
                     int gameMessages = 0;
-                    int messageNo = 0;
-                    while(gameMessages < 5 && messageNo < headers.size()){
+                    int messageNo = headers.size()-1;
+                    int maxMessages = 3;
+                    while(gameMessages < maxMessages && messageNo < headers.size()){
                         if(headers.get(messageNo).subject.equals("3DHANGMAN")){
                             String message = pop.getContent(headers.get(messageNo).indexOnServer);
                             if(!shownMessages.contains(message)){
-                                shownMessages.add(0,message);
-                                if(shownMessages.size() > 5){
-                                    shownMessages.remove(shownMessages.size()-1);
+                                shownMessages.add(headers.get(messageNo).sender.substring(0,headers.get(messageNo).sender.indexOf("<")-1)+" : "+message);
+                                if(gameMessages >= maxMessages){
+                                    shownMessages.remove(0);
                                 }
                             }
                             gameMessages++;
                         }
-                        messageNo++;
+                        messageNo--;
                     }
+                    notifyClients();
                     sleep(1000 * 10);
                 } catch (Exception e) {
                     System.out.println(e.getMessage());

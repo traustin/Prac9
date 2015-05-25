@@ -86,12 +86,13 @@ public class POP3Client {
 
             if(content)
                 result += line+"\n";
-
-            if(line.equals("Content-Type: text/html; charset=UTF-8"))
+           // System.out.print(line);
+            if(line.equals("Content-Type: text/plain; charset=UTF-8"))
                 content = true;
 
             line = in.readLine();
         }
+        result = result.substring(result.indexOf("\n"));
         result = result.substring(0,result.indexOf("--"));
         result = result.trim();
         return result;

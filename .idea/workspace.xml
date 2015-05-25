@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="374ed546-873f-4ace-9cf3-eedf2089f160" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GameServer/GameHandler.java" afterPath="$PROJECT_DIR$/GameServer/GameHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GameServer/out/production/GameServer/GameHandler.class" afterPath="$PROJECT_DIR$/GameServer/out/production/GameServer/GameHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GameServer/out/production/GameServer/GameServer$MailChecker.class" afterPath="$PROJECT_DIR$/GameServer/out/production/GameServer/GameServer$MailChecker.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GameServer/out/production/GameServer/GameServer.class" afterPath="$PROJECT_DIR$/GameServer/out/production/GameServer/GameServer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GameServer/out/production/GameServer/POP3Client.class" afterPath="$PROJECT_DIR$/GameServer/out/production/GameServer/POP3Client.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GameServer/GameServer.java" afterPath="$PROJECT_DIR$/GameServer/GameServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GameServer/Main.java" afterPath="$PROJECT_DIR$/GameServer/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GameServer/POP3Client.java" afterPath="$PROJECT_DIR$/GameServer/POP3Client.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Node Server/NodeServer/views/index.hjs" afterPath="$PROJECT_DIR$/Node Server/NodeServer/views/index.hjs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GameServer/.idea/workspace.xml" afterPath="$PROJECT_DIR$/GameServer/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Node Server/NodeServer/.idea/workspace.xml" afterPath="$PROJECT_DIR$/Node Server/NodeServer/.idea/workspace.xml" />
     </list>
     <ignored path="COS332_Prac9.iws" />
@@ -44,8 +47,8 @@
       <file leaf-file-name="index.hjs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Node Server/NodeServer/views/index.hjs">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5046404" vertical-offset="1350" max-vertical-offset="3015">
-              <caret line="119" column="39" selection-start-line="119" selection-start-column="39" selection-end-line="119" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.52204174" vertical-offset="1350" max-vertical-offset="3030">
+              <caret line="120" column="27" selection-start-line="120" selection-start-column="27" selection-end-line="120" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -313,8 +316,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Node Server/NodeServer/views/index.hjs">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5046404" vertical-offset="1350" max-vertical-offset="3015">
-          <caret line="119" column="39" selection-start-line="119" selection-start-column="39" selection-end-line="119" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.52204174" vertical-offset="1350" max-vertical-offset="3030">
+          <caret line="120" column="27" selection-start-line="120" selection-start-column="27" selection-end-line="120" selection-end-column="27" />
           <folding />
         </state>
       </provider>

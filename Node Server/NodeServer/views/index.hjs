@@ -118,6 +118,7 @@
             var area = document.getElementById("outputArea");
             if(message.length > 6 && message.substring(0,4) == "MSG"){
                 var msgNo = message[5];
+                alert(msgNo);
             }
             if(message == "RESULT false"){
                 parts++;
