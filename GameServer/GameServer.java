@@ -18,7 +18,6 @@ public class GameServer{
         public ArrayList<String> shownMessages;
 
         synchronized public void notifyClients(){
-
             for(GameHandler g : clients){
                 int i = 0;
                 for(String message : shownMessages)

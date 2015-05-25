@@ -44,7 +44,7 @@ public class GameHandler extends Thread {
 
             while(!done){
                 System.out.println(email);
-                //if(!email.equals("")) GameServer.clients.add(this);
+                if(!email.equals("")) GameServer.clients.add(this);
                 String s = in.readLine().trim();
                 System.out.println(s);
                 if(s.length()==3&&s.equals("BYE")){

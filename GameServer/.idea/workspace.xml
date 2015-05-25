@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b9dd6ce-74c0-4957-9f68-4448cbe9d9a7" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GameServer/GameHandler.class" afterPath="$PROJECT_DIR$/out/production/GameServer/GameHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GameServer/GameServer$MailChecker.class" afterPath="$PROJECT_DIR$/out/production/GameServer/GameServer$MailChecker.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GameServer/GameServer.class" afterPath="$PROJECT_DIR$/out/production/GameServer/GameServer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GameHandler.java" afterPath="$PROJECT_DIR$/GameHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GameServer.java" afterPath="$PROJECT_DIR$/GameServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Node Server/NodeServer/views/index.hjs" afterPath="$PROJECT_DIR$/../Node Server/NodeServer/views/index.hjs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Node Server/NodeServer/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Node Server/NodeServer/.idea/workspace.xml" />
     </list>
     <ignored path="GameServer.iws" />
@@ -44,8 +47,8 @@
       <file leaf-file-name="GameServer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GameServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31304348" vertical-offset="0" max-vertical-offset="1545">
-              <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.104347825" vertical-offset="150" max-vertical-offset="1530">
+              <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
               <folding>
                 <element signature="e#309#322#0" expanded="true" />
               </folding>
@@ -76,8 +79,8 @@
       <file leaf-file-name="GameHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GameHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="64" max-vertical-offset="1245">
-              <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="520" max-vertical-offset="1245">
+              <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -501,7 +504,7 @@
       <option name="number" value="Default" />
       <updated>1432563365895</updated>
       <workItem from="1432563370282" duration="6636000" />
-      <workItem from="1432570236700" duration="2044000" />
+      <workItem from="1432570236700" duration="3377000" />
     </task>
     <task id="LOCAL-00001" summary="pop3 changes">
       <created>1432565343339</created>
@@ -513,7 +516,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8680000" />
+    <option name="totallyTimeSpent" value="10013000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1880" height="992" extended-state="0" />
@@ -568,7 +571,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -691,14 +694,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="64" max-vertical-offset="1245">
-          <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GameClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
@@ -715,10 +710,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/GameHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="520" max-vertical-offset="1245">
+          <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/GameServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31304348" vertical-offset="0" max-vertical-offset="1545">
-          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.104347825" vertical-offset="150" max-vertical-offset="1530">
+          <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
           <folding>
             <element signature="e#309#322#0" expanded="true" />
           </folding>
