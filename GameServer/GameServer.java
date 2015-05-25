@@ -14,12 +14,22 @@ public class GameServer{
         private POP3Client pop;
         private ArrayList<MailHeader> headers;
         public ArrayList<GameHandler> clients;
+        public ArrayList<String> shownMessages;
+
+        public void notifyClients(){
+            int i = 0;
+            for(GameHandler g : clients){
+                for(String message : shownMessages)
+                    g.sendToClient("MSG "+(i++)+" "+message);
+            }
+        }
 
         public MailChecker(){
             try {
                 pop = new POP3Client(Main.pop3ServerName,Main.pop3Port);
                 pop.login(Main.pop3Username,Main.pop3Password);
                 clients = new ArrayList<GameHandler>();
+                shownMessages = new ArrayList<String>();
             }
             catch(Exception e){
                 System.out.println(e.getMessage());
@@ -31,10 +41,22 @@ public class GameServer{
                 try {
                     pop.populateMailHeaders();
                     headers = pop.getMailList();
-                    int count = 0;
-
-
-                    sleep(1000 * 30);
+                    int gameMessages = 0;
+                    int messageNo = 0;
+                    while(gameMessages < 5 && messageNo < headers.size()){
+                        if(headers.get(messageNo).subject.equals("3DHANGMAN")){
+                            String message = pop.getContent(headers.get(messageNo).indexOnServer);
+                            if(!shownMessages.contains(message)){
+                                shownMessages.add(0,message);
+                                if(shownMessages.size() > 5){
+                                    shownMessages.remove(shownMessages.size()-1);
+                                }
+                            }
+                            gameMessages++;
+                        }
+                        messageNo++;
+                    }
+                    sleep(1000 * 10);
                 } catch (Exception e) {
                     System.out.println(e.getMessage());
                 }

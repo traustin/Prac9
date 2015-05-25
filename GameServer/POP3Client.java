@@ -77,6 +77,26 @@ public class POP3Client {
         return false;
     }
 
+    public String getContent(int messageNo) throws IOException{
+        String result = "";
+        out.println("RETR "+messageNo);
+        String line = in.readLine();
+        boolean content = false;
+        while(!line.equals(".")){
+
+            if(content)
+                result += line+"\n";
+
+            if(line.equals("Content-Type: text/html; charset=UTF-8"))
+                content = true;
+
+            line = in.readLine();
+        }
+        result = result.substring(0,result.indexOf("--"));
+        result = result.trim();
+        return result;
+    }
+
     public void unmarkToDelete() throws IOException{
         out.println("RSET");//the only possible response is +OK
         in.readLine();

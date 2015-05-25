@@ -116,6 +116,9 @@
 
         function on_socket_get(message){
             var area = document.getElementById("outputArea");
+            if(message.length > 6 && message.substring(0,4) == "MSG"){
+                var msgNo = message[5];
+            }
             if(message == "RESULT false"){
                 parts++;
                 if(parts > 5){

@@ -11,7 +11,7 @@ public class Main {
         if(args.length > 0)
             game = new GameServer(new Integer(args[0]));
         else
-            game  = new GameServer(8190);
+            game = new GameServer(8190);
 
         game.run();
     }

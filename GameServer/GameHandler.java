@@ -18,6 +18,10 @@ public class GameHandler extends Thread {
         wordGenerator = new WordGenerator("words.txt");
     }
 
+    public void sendToClient(String message){
+        out.println(message);
+    }
+
     public void run(){
         System.out.println("Client connected");
         try {
