@@ -84,6 +84,10 @@ function drawScene() {
         parseFloat(pointRGB[2])
     );
 
+    world.primitives.sphere.draw(function(){
+        mat4.scale(mvMatrix,[30,30,30]);
+    },redTexture);
+
     world.primitives.cube.draw(function(){
         mat4.scale(mvMatrix,[1.0,0.1,1.0]);
     },woodTexture);
@@ -103,9 +107,9 @@ function drawScene() {
     if(parts > 0) {
         world.primitives.sphere.draw(function () {
             mat4.translate(mvMatrix, [0.4, 3.3, 0.0]);
-            mat4.scale(mvMatrix, [0.3, 0.3, 0.3]);
-
-        });
+            mat4.scale(mvMatrix, [0.3, 0.33, 0.3]);
+            mat4.rotate(mvMatrix,degToRad(90),[0,1,0]);
+        },faceTexture);
     }
     if(parts > 1){
         //torso

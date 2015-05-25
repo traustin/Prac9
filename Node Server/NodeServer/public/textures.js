@@ -16,6 +16,10 @@ function handleLoadedTexture(texture) {
 
 var skinTexture;
 var woodTexture;
+var redTexture;
+var eyeTexture;
+var torsoTexture;
+var faceTexture;
 
 
 function initTexture() {
@@ -34,5 +38,37 @@ function initTexture() {
     };
 
     woodTexture.image.src = "./img/wood.jpg";
+
+    redTexture = gl.createTexture();
+    redTexture.image = new Image();
+    redTexture.image.onload = function () {
+        handleLoadedTexture(redTexture)
+    };
+
+    redTexture.image.src = "./img/red.jpg";
+
+    eyeTexture = gl.createTexture();
+    eyeTexture.image = new Image();
+    eyeTexture.image.onload = function () {
+        handleLoadedTexture(eyeTexture)
+    };
+
+    eyeTexture.image.src = "./img/eye.jpg";
+
+    torsoTexture = gl.createTexture();
+    torsoTexture.image = new Image();
+    torsoTexture.image.onload = function () {
+        handleLoadedTexture(torsoTexture)
+    };
+
+    torsoTexture.image.src = "./img/torso.jpg";
+
+    faceTexture = gl.createTexture();
+    faceTexture.image = new Image();
+    faceTexture.image.onload = function () {
+        handleLoadedTexture(faceTexture)
+    };
+
+    faceTexture.image.src = "./img/face.jpg";
     
 }

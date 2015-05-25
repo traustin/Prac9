@@ -112,6 +112,7 @@
             socket_send("RESET");
             parts  = 0;
             document.getElementById("go").style.visibility = "visible";
+            document.getElementById("inputField").focus();
         }
 
         function on_socket_get(message){
@@ -128,6 +129,7 @@
             }else if(message == "RESULT true"){
                 document.getElementById("go").style.visibility = "visible";
                 area.innerHTML = "<div data-alert class='alert-box success radius'>Congratulations! You won!</div>" + area.innerHTML;
+                document.getElementById("go").style.visibility = "hidden";
             }
             else
             {
@@ -145,6 +147,7 @@
            var s = document.getElementById("inputField").value;
             socket_send("TRY "+s);
             document.getElementById("inputField").value = "";
+            document.getElementById("inputField").focus();
         }
     </script>
 
@@ -195,7 +198,7 @@
     $(document).foundation();
     $(document).ready(function(){
         /**/
-        run();
+run();
     });
 </script>
 </body>

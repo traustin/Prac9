@@ -51,6 +51,7 @@ public class GameHandler extends Thread {
                     GameServer.clients.remove(this);
                     break;
                 }else if(s.length()==5&&s.equals("RESET")){
+                    out.println("The word was : "+word);
                     word = wordGenerator.getWord();
                     shownWord = "";
                     for(int i = 0; i <  word.length(); i++){

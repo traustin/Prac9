@@ -34,13 +34,10 @@ function handleKeyDown(event) {
 function handleKeyUp(event) {
     currentlyPressedKeys[event.keyCode] = false;
     //Enter key press
-    if(event.keyCode == 13 && !trainMove){
-        trainMove = true;
+    if(event.keyCode == 13){
+        send();
     }
-    if(event.keyCode == 32){
-        if(seeThrough) seeThrough = false;
-        else seeThrough = true;
-    }
+
 }
 
 
