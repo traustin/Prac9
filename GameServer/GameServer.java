@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * Created by Trevor on 2015-05-24.
  */
 public class GameServer{
-    public ArrayList<GameHandler> clients;
+    public static ArrayList<GameHandler> clients = new ArrayList<GameHandler>();
     public MailChecker mailChecker;
     private class MailChecker extends Thread{
         private POP3Client pop;
@@ -17,9 +17,10 @@ public class GameServer{
 
         public ArrayList<String> shownMessages;
 
-        public void notifyClients(){
-            int i = 0;
+        synchronized public void notifyClients(){
+
             for(GameHandler g : clients){
+                int i = 0;
                 for(String message : shownMessages)
                     g.sendToClient("MSG "+(i++)+" "+message);
             }
@@ -46,7 +47,7 @@ public class GameServer{
 
                     int gameMessages = 0;
                     int messageNo = headers.size()-1;
-                    int maxMessages = 3;
+                    int maxMessages = 5;
                     while(gameMessages < maxMessages && messageNo < headers.size()){
                         if(headers.get(messageNo).subject.equals("3DHANGMAN")){
                             String message = pop.getContent(headers.get(messageNo).indexOnServer);
@@ -77,7 +78,6 @@ public class GameServer{
         this.port = port;
         mailChecker = new MailChecker();
         mailChecker.start();
-        clients = new ArrayList<GameHandler>();
     }
 
     public void run(){
@@ -90,8 +90,8 @@ public class GameServer{
             while(true){
                 Socket cSock = server.accept();
                 GameClient client = new GameClient(cSock);
-                clients.add(new GameHandler(client));
-                clients.get(clients.size()-1).start();
+                new GameHandler(client).start();
+
             }
         } catch (IOException e) {
             e.printStackTrace();

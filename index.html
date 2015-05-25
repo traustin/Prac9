@@ -116,7 +116,10 @@
 
         function on_socket_get(message){
             var area = document.getElementById("outputArea");
-            if(message == "RESULT false"){
+            if(message.length > 5 && message.substring(0,3) == "MSG"){
+                var msgNo = message[4];
+                document.getElementById(msgNo).innerHTML = message.substring(5);
+            }else if(message == "RESULT false"){
                 parts++;
                 if(parts > 5){
                     document.getElementById("inputField").style.disabled = true;
@@ -164,6 +167,11 @@
         <div class="row">
             <div class="large-6 columns">
                 <input id="inputField" type="text" size="1" placeholder="a"/>
+                <div id="0"></div>
+                <div id="1"></div>
+                <div id="2"></div>
+                <div id="3"></div>
+                <div id="4"></div>
             </div>
             <div class="large-6 columns">
                 <a href="#" class="button radius" onclick="send()">Go</a>

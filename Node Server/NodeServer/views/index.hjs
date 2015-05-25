@@ -118,9 +118,8 @@
             var area = document.getElementById("outputArea");
             if(message.length > 5 && message.substring(0,3) == "MSG"){
                 var msgNo = message[4];
-
-            }
-            if(message == "RESULT false"){
+                document.getElementById(msgNo).innerHTML = message.substring(5);
+            }else if(message == "RESULT false"){
                 parts++;
                 if(parts > 5){
                     document.getElementById("inputField").style.disabled = true;

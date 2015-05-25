@@ -4,7 +4,7 @@
     <list default="true" id="3b9dd6ce-74c0-4957-9f68-4448cbe9d9a7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GameHandler.java" afterPath="$PROJECT_DIR$/GameHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GameServer.java" afterPath="$PROJECT_DIR$/GameServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Node Server/NodeServer/views/index.hjs" afterPath="$PROJECT_DIR$/../Node Server/NodeServer/views/index.hjs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Node Server/NodeServer/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Node Server/NodeServer/.idea/workspace.xml" />
     </list>
     <ignored path="GameServer.iws" />
@@ -44,9 +44,11 @@
       <file leaf-file-name="GameServer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GameServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.173913" vertical-offset="70" max-vertical-offset="1545">
-              <caret line="93" column="54" selection-start-line="93" selection-start-column="54" selection-end-line="93" selection-end-column="54" />
-              <folding />
+            <state vertical-scroll-proportion="0.31304348" vertical-offset="0" max-vertical-offset="1545">
+              <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+              <folding>
+                <element signature="e#309#322#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -74,8 +76,8 @@
       <file leaf-file-name="GameHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GameHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1200">
-              <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="64" max-vertical-offset="1245">
+              <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -499,7 +501,7 @@
       <option name="number" value="Default" />
       <updated>1432563365895</updated>
       <workItem from="1432563370282" duration="6636000" />
-      <workItem from="1432570236700" duration="516000" />
+      <workItem from="1432570236700" duration="2044000" />
     </task>
     <task id="LOCAL-00001" summary="pop3 changes">
       <created>1432565343339</created>
@@ -511,7 +513,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7152000" />
+    <option name="totallyTimeSpent" value="8680000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1880" height="992" extended-state="0" />
@@ -566,14 +568,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/GameServer.java</url>
-          <line>51</line>
-          <properties />
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
@@ -595,7 +589,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1500">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#309#322#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -695,10 +691,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/POP3Client.java">
+    <entry file="file://$PROJECT_DIR$/GameHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="938" max-vertical-offset="2520">
-          <caret line="96" column="31" selection-start-line="96" selection-start-column="31" selection-end-line="96" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="64" max-vertical-offset="1245">
+          <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -711,19 +707,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameHandler.java">
+    <entry file="file://$PROJECT_DIR$/POP3Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="1200">
-          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="938" max-vertical-offset="2520">
+          <caret line="96" column="31" selection-start-line="96" selection-start-column="31" selection-end-line="96" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GameServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.173913" vertical-offset="70" max-vertical-offset="1545">
-          <caret line="93" column="54" selection-start-line="93" selection-start-column="54" selection-end-line="93" selection-end-column="54" />
-          <folding />
+        <state vertical-scroll-proportion="0.31304348" vertical-offset="0" max-vertical-offset="1545">
+          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+          <folding>
+            <element signature="e#309#322#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
