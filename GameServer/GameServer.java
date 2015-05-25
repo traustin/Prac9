@@ -61,9 +61,14 @@ public class GameServer{
                         messageNo--;
                     }
                     notifyClients();
-                    sleep(1000 * 10);
+                    sleep(1000 * 30);
                 } catch (Exception e) {
                     System.out.println(e.getMessage());
+                    try {
+                        sleep(1000 * 60);
+                    }catch (Exception ex){
+
+                    }
                 }
 
             }

@@ -59,20 +59,20 @@ var speedLR = 0;
 
 
 function handleKeys(){
-    if (currentlyPressedKeys[37] || currentlyPressedKeys[65]) {
+    if (currentlyPressedKeys[37]) {
         // Left cursor key or A
          speedLR = 0.003;
-    } else if (currentlyPressedKeys[39] || currentlyPressedKeys[68]) {
+    } else if (currentlyPressedKeys[39]) {
         // Right cursor key or D
          speedLR = -0.003;
     } else {
          speedLR = 0;
     }
 
-    if (currentlyPressedKeys[38] || currentlyPressedKeys[87]) {
+    if (currentlyPressedKeys[38]) {
         // Up cursor key or W
         speedFB = 0.003;
-    } else if (currentlyPressedKeys[40] || currentlyPressedKeys[83]) {
+    } else if (currentlyPressedKeys[40]) {
         // Down cursor key
         speedFB = -0.003;
     } else {
