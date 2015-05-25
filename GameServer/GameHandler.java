@@ -12,6 +12,7 @@ public class GameHandler extends Thread {
     private GameClient toClient;
     private String email;
     private WordGenerator wordGenerator;
+    private SMTPClient mailer;
 
     public GameHandler(GameClient toClient) {
         this.toClient = toClient;
@@ -68,6 +69,7 @@ public class GameHandler extends Thread {
                     out.println(letter + " : " + shownWord);
                     if(word.equals(shownWord)){
                         out.println("RESULT " + changed);
+                        mailer.send(email, "DONOTREPLY@3DHangman.com");
                     }else if(changed == false){
                         out.println("RESULT " + changed);
                     }
