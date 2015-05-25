@@ -42,7 +42,7 @@ public class SMTPClient {
             in.close();
             socket.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.print(e.getMessage());
         }
 
     }

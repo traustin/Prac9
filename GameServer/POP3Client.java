@@ -51,7 +51,7 @@ public class POP3Client {
         out.println("PASS " + _password);
         response = in.readLine();
         if (!response.matches("[+]OK.*")) {
-            throw new IncorrectPasswordException();
+           // throw new IncorrectPasswordException();
         }
     }
     

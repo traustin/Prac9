@@ -94,7 +94,7 @@
         function run(){
           connected = false;
             if(!connected){
-                connected = socket_connect(window.prompt("Enter IP address:","192.168.0.7"),
+                connected = socket_connect(window.prompt("Enter IP address:","localhost"),
                         window.prompt("Enter Port:","8190"));
             }
             do {
@@ -111,7 +111,7 @@
         function reset(){
             socket_send("RESET");
             parts  = 0;
-            document.getElementById("inputField").style.disabled = true;
+            document.getElementById("go").style.visibility = "visible";
         }
 
         function on_socket_get(message){
@@ -122,11 +122,11 @@
             }else if(message == "RESULT false"){
                 parts++;
                 if(parts > 5){
-                    document.getElementById("inputField").style.disabled = true;
+                    document.getElementById("go").style.visibility = "hidden";
                     area.innerHTML = "<div data-alert class='alert-box error radius'>You lost! Better luck next time buddy.</div>" + area.innerHTML;
                 }
             }else if(message == "RESULT true"){
-                document.getElementById("inputField").style.disabled = false;
+                document.getElementById("go").style.visibility = "visible";
                 area.innerHTML = "<div data-alert class='alert-box success radius'>Congratulations! You won!</div>" + area.innerHTML;
             }
             else
@@ -174,7 +174,7 @@
                 <div id="4"></div>
             </div>
             <div class="large-6 columns">
-                <a href="#" class="button radius" onclick="send()">Go</a>
+                <a id="go" href="#" class="button radius" onclick="send()">Go</a>
                 <a href="#" class="button radius" onclick="reset()">Reset</a>
             </div>
         </div>

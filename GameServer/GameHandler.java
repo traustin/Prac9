@@ -17,11 +17,10 @@ public class GameHandler extends Thread {
     public GameHandler(GameClient toClient) {
         this.toClient = toClient;
         wordGenerator = new WordGenerator("words.txt");
+        mailer = new SMTPClient(Main.smtpServer,Main.smtpPort);
     }
 
     public void sendToClient(String message){
-
-        System.out.println(message);
         out.println(message);
     }
 
@@ -49,6 +48,7 @@ public class GameHandler extends Thread {
                 System.out.println(s);
                 if(s.length()==3&&s.equals("BYE")){
                     System.out.println("Client disconnected");
+                    GameServer.clients.remove(this);
                     break;
                 }else if(s.length()==5&&s.equals("RESET")){
                     word = wordGenerator.getWord();
