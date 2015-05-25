@@ -32,7 +32,6 @@ public class SMTPClient {
             out.println("DATA");
             System.out.println(in.readLine());
             out.println("Subject: Your 3D Hangman results");
-            out.println("To: " + from);
             out.println("Congratulations you won your game of 3DHangman!");
             out.println(".");
             out.println("QUIT");
