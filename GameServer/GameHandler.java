@@ -19,6 +19,8 @@ public class GameHandler extends Thread {
     }
 
     public void sendToClient(String message){
+
+        System.out.println(message);
         out.println(message);
     }
 

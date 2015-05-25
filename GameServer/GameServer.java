@@ -9,11 +9,12 @@ import java.util.ArrayList;
  * Created by Trevor on 2015-05-24.
  */
 public class GameServer{
+    public ArrayList<GameHandler> clients;
     public MailChecker mailChecker;
     private class MailChecker extends Thread{
         private POP3Client pop;
         private ArrayList<MailHeader> headers;
-        public ArrayList<GameHandler> clients;
+
         public ArrayList<String> shownMessages;
 
         public void notifyClients(){
@@ -76,6 +77,7 @@ public class GameServer{
         this.port = port;
         mailChecker = new MailChecker();
         mailChecker.start();
+        clients = new ArrayList<GameHandler>();
     }
 
     public void run(){
@@ -88,7 +90,8 @@ public class GameServer{
             while(true){
                 Socket cSock = server.accept();
                 GameClient client = new GameClient(cSock);
-                new GameHandler(client).start();
+                clients.add(new GameHandler(client));
+                clients.get(clients.size()-1).start();
             }
         } catch (IOException e) {
             e.printStackTrace();

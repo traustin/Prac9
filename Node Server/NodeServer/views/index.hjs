@@ -116,9 +116,9 @@
 
         function on_socket_get(message){
             var area = document.getElementById("outputArea");
-            if(message.length > 6 && message.substring(0,4) == "MSG"){
-                var msgNo = message[5];
-                alert(msgNo);
+            if(message.length > 5 && message.substring(0,3) == "MSG"){
+                var msgNo = message[4];
+
             }
             if(message == "RESULT false"){
                 parts++;
@@ -168,6 +168,11 @@
         <div class="row">
             <div class="large-6 columns">
                 <input id="inputField" type="text" size="1" placeholder="a"/>
+                <div id="0"></div>
+                <div id="1"></div>
+                <div id="2"></div>
+                <div id="3"></div>
+                <div id="4"></div>
             </div>
             <div class="large-6 columns">
                 <a href="#" class="button radius" onclick="send()">Go</a>
